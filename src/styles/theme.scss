@@ -1,0 +1,16 @@
+html {
+  --header-height: 42px;
+  --el-menu-hover-bg-color: transparent !important;
+  --el-menu-item-height: 48px !important;
+  --el-border-radius-base: 8px !important;
+  --el-tag-border-radius: 8px !important;
+  --el-border-radius-small: 4px !important;
+}
+
+html.light {
+  --el-text-color-primary: rgba(0, 0, 0, 0.88);
+}
+
+html.dark {
+  --el-text-color-primary: #fff;
+}
