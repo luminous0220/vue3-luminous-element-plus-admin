@@ -32,10 +32,10 @@ html,
 body,
 #app {
   overflow-x: hidden;
-  width: 100%;
+  width: 100% !important;
   height: 100%;
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
   font-size: 16px;
 }
 
@@ -53,6 +53,7 @@ h6 {
 a:hover {
   text-decoration: none;
 }
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -95,16 +96,20 @@ input:-webkit-autofill {
   width: 2px;
   height: 6px;
 }
-::-webkit-scrollbar-corner, /* 滚动条角落 */
- ::-webkit-scrollbar-thumb,
- ::-webkit-scrollbar-track {
+
+::-webkit-scrollbar-corner,
+/* 滚动条角落 */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-corner,
 ::-webkit-scrollbar-track {
   /* 滚动条轨道 */
   background-color: rgba(180, 160, 120, 0.03);
 }
+
 ::-webkit-scrollbar-thumb {
   /* 滚动条手柄 */
   background-color: rgb(139, 139, 139, 0.6);

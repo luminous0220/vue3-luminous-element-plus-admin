@@ -5,6 +5,7 @@
     :size="globalStore.sizeGet"
     :fullscreen="globalStore.isMobile"
     ref="ElRef"
+    append-to-body
     :title="`${editProps.title}`"
     v-model="visible"
     :destroy-on-close="true"
@@ -36,6 +37,7 @@
     v-else
     class="rounded-11px!"
     ref="ElRef"
+    append-to-body
     :width="globalStore.sizeGet"
     :fullscreen="globalStore.isMobile"
     :title="`${editProps.title}`"
@@ -105,7 +107,7 @@ const accept = async (params: IEditForm) => {
 // 确认提交
 const onSubmit = async () => {
   if (formRef.value) {
-    formRef.value.validate(async (valid) => {
+    formRef.value.validate(async (valid: any) => {
       emit('onSubmit', editProps.value, valid)
     })
   } else {
