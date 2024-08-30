@@ -78,7 +78,7 @@ export const useGlobalStore = defineStore({
     sizeGet() {
       switch (this.device) {
         case 'pc':
-          return '488px'
+          return '388px'
         case 'pad':
           return '60%'
         default:

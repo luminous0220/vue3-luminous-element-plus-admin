@@ -80,7 +80,7 @@
     <basic-dialog
       v-model="visiable"
       title="头像上传"
-      class="rounded-22px lt-lg:w-100%! lt-xl:w-80%!"
+      class="rounded-22px lt-lg:w-100%! lt-xl:w-80%! w-688px!"
       draggable
       @close="closeAvatarEditor">
       <div class="flex justify-around lt-md:flex-col">

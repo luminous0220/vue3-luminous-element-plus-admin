@@ -74,8 +74,8 @@ defineEmits<{ (e: 'onSwitch', val: string): void }>()
 // * 密码登录
 const formEl = ref<FormInstance | null>()
 const model = reactive({
-  account: '',
-  password: ''
+  account: 'myuser',
+  password: '123456'
 })
 
 const rules = reactive({

@@ -29,6 +29,8 @@ const logout = async () => {
   const sure = await window.$confirm.warning({ message: '确认是否退出账号' })
   if (sure) {
     removeToken()
+    window.localStorage.clear()
+    window.sessionStorage.clear()
     navigateByPath(CFG.LOGIN_ROUTE)
     authStore.$reset()
   }
