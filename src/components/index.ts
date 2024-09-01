@@ -6,6 +6,7 @@ import EditForm from '@/components/EditForm/EditForm.vue'
 import Motion from '@/components/Motion/Motion.vue'
 import SvgIcon from '@/components/SvgIcon/SvgIcon.vue'
 import BasicTable from '@/components/BasicTable/BasicTable.vue'
+import AvatarEditor from '@/components/AvatarEditor/AvatarEditor.vue'
 import { UploadButton, ManualUpload } from '@/components/Upload'
 import TreeSelect from '@/components/TreeSelect/TreeSelect.vue'
 import { LoadingPrimay } from '@/components/Loading'
@@ -28,6 +29,7 @@ export const setupGlobalComponent = (vue: App) => {
 }
 
 export {
+  AvatarEditor,
   BasicDialog,
   BasicDrawer,
   BasicForm,

@@ -80,7 +80,7 @@
       </template>
     </basic-table>
 
-    <!-- 编辑、新增 drawer -->
+    <!-- 新增 drawer -->
     <edit-form mode="dialog" ref="EditFormRef" @onSubmit="onSubmit"> </edit-form>
   </div>
 </template>
@@ -294,9 +294,11 @@ const handleOpen = async (title: string, item: Partial<IUser.Item> = {}) => {
         label: '生日'
       },
       {
-        el: 'input',
         prop: 'avatar',
-        label: '上传头像'
+        label: '上传头像',
+        render: () => {
+          return <avatar-editor disabled={true} />
+        }
       },
       {
         el: 'input',
@@ -320,45 +322,6 @@ const handleOpen = async (title: string, item: Partial<IUser.Item> = {}) => {
 
     EditFormRef.value?.accept(editFormProps)
     return
-  } else if (title === '编辑') {
-    editFormProps.formSchema = [
-      {
-        el: 'input',
-        prop: 'nickname',
-        label: '昵称',
-        attrs: {
-          placeholder: '请填写昵称'
-        }
-      },
-      {
-        el: 'radio',
-        prop: 'sex',
-        label: '性别',
-        options: GENDER_OPIONS,
-        rule: [{ required: true, message: '该项必填', trigger: 'change' }]
-      },
-      {
-        el: 'date',
-        prop: 'birthday',
-        label: '生日'
-      },
-      {
-        el: 'input',
-        prop: 'avatar',
-        label: '上传头像'
-      },
-
-      {
-        el: 'input',
-        label: '签名',
-        attrs: {
-          type: 'textarea'
-        },
-        prop: 'sign'
-      }
-    ]
-    Object.assign(editFormProps.row, item)
-    EditFormRef.value?.accept(editFormProps)
   } else if (title === '授权') {
     const { data } = await SysApi.getRoleList({})
 

@@ -1,5 +1,9 @@
 <template>
-  <basic-drawer class="theme-drawer" ref="DrawerRef" :hideFooter="true" title="主题设置">
+  <basic-drawer
+    class="theme-drawer md:w-388px!"
+    ref="DrawerRef"
+    :hideFooter="true"
+    title="主题设置">
     <!-- 主题设置 -->
     <el-divider>
       <div class="flex items-center">

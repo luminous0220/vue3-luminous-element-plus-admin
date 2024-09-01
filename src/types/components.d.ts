@@ -10,11 +10,13 @@ declare module 'vue' {
     403: typeof import('./../components/ErrorMessage/403.vue')['default']
     404: typeof import('./../components/ErrorMessage/404.vue')['default']
     500: typeof import('./../components/ErrorMessage/500.vue')['default']
+    AvatarEditor: typeof import('./../components/AvatarEditor/AvatarEditor.vue')['default']
     BasicDialog: typeof import('./../components/BasicDialog/BasicDialog.vue')['default']
     BasicDrawer: typeof import('./../components/BasicDrawer/BasicDrawer.vue')['default']
     BasicForm: typeof import('./../components/BasicForm/BasicForm.vue')['default']
     BasicTable: typeof import('./../components/BasicTable/BasicTable.vue')['default']
     ColSetting: typeof import('./../components/BasicTable/components/ColSetting.vue')['default']
+    copy: typeof import('./../components/Upload/ManualUpload copy.vue')['default']
     EditForm: typeof import('./../components/EditForm/EditForm.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAutocomplete: typeof import('element-plus/es')['ElAutocomplete']
@@ -65,6 +67,7 @@ declare module 'vue' {
     ICarbonCloudDownload: typeof import('~icons/carbon/cloud-download')['default']
     ICarbonDocumentExport: typeof import('~icons/carbon/document-export')['default']
     ICarbonEmail: typeof import('~icons/carbon/email')['default']
+    ICarbonImage: typeof import('~icons/carbon/image')['default']
     ICarbonMenu: typeof import('~icons/carbon/menu')['default']
     ICarbonSearch: typeof import('~icons/carbon/search')['default']
     ICarbonSecurity: typeof import('~icons/carbon/security')['default']
@@ -94,5 +97,6 @@ declare module 'vue' {
     TableColumn: typeof import('./../components/BasicTable/components/TableColumn.vue')['default']
     TreeSelect: typeof import('./../components/TreeSelect/TreeSelect.vue')['default']
     UploadButton: typeof import('./../components/Upload/UploadButton.vue')['default']
+    UploadImg: typeof import('./../components/Upload/UploadImg.vue')['default']
   }
 }
