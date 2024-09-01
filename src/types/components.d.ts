@@ -16,7 +16,6 @@ declare module 'vue' {
     BasicForm: typeof import('./../components/BasicForm/BasicForm.vue')['default']
     BasicTable: typeof import('./../components/BasicTable/BasicTable.vue')['default']
     ColSetting: typeof import('./../components/BasicTable/components/ColSetting.vue')['default']
-    copy: typeof import('./../components/Upload/ManualUpload copy.vue')['default']
     EditForm: typeof import('./../components/EditForm/EditForm.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAutocomplete: typeof import('element-plus/es')['ElAutocomplete']
@@ -97,6 +96,5 @@ declare module 'vue' {
     TableColumn: typeof import('./../components/BasicTable/components/TableColumn.vue')['default']
     TreeSelect: typeof import('./../components/TreeSelect/TreeSelect.vue')['default']
     UploadButton: typeof import('./../components/Upload/UploadButton.vue')['default']
-    UploadImg: typeof import('./../components/Upload/UploadImg.vue')['default']
   }
 }
