@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="cursor-pointer mask lt-md:(mt-0)" @click="openAvatarEditor">
-      <el-avatar :size="128" :src="authStore.avatar">
+      <el-avatar :size="128" :src="authStore.user.avatar">
         <i-carbon-image class="text-68px" />
       </el-avatar>
       <div class="text-center text-12px mt-8px text-#95aac9">点击头像进行编辑</div>
