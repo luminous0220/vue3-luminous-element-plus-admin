@@ -19,7 +19,7 @@
 
 ## 🎈预览
 
-[`yun-ding-server`](http://47.109.19.100/#/home)
+[`vue3-luminous-element-plus-admin`](http://47.109.19.100/#/home)
 
 账号：`admin`，密码：`123456`
 
