@@ -1,4 +1,4 @@
-const SYSTEM_NAME = 'yun-ding-admin'
+const SYSTEM_NAME = 'vue3-luminous-element-plus-admin'
 
 // 首页地址
 const HOME_ROUTE = '/home'

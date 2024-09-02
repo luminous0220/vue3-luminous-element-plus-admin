@@ -1,10 +1,10 @@
 {
-  "name": "yun-ding-admin",
+  "name": "vue3-luminous-element-plus-admin",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "author": {
-    "name": "Zhan",
+    "name": "luminous0220",
     "email": "947839867@qq.com"
   },
   "scripts": {
