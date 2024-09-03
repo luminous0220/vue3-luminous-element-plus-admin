@@ -90,7 +90,7 @@ import { BasicTable, IColumns, IEditForm, IFormSchema, EditForm } from '@/compon
 import { ExportApi, IUser, SysApi } from '@/apis'
 import { dayjs } from 'element-plus'
 import { GENDER_OPIONS, USER_STATUS } from '@/constants'
-import { handleExport } from '@/utils'
+import { fileUrl, handleExport } from '@/utils'
 
 interface IProps {
   reqApi?: (params: any) => Promise<any>
@@ -174,7 +174,7 @@ withDefaults(defineProps<IProps>(), {
         prop: 'avatar',
         label: '头像',
         render: (scope) => {
-          return <img src={scope.row.avatar} class="w-full"></img>
+          return <img src={fileUrl(scope.row.avatar)} class="w-full"></img>
         }
       },
 

@@ -1,7 +1,7 @@
 <template>
   <el-dropdown class="h-full" trigger="hover">
     <div class="px-8px flex items-center cursor-pointer header-icon text-12px! outline-none!">
-      <el-avatar class="mr-8px min-w-36px" :size="36" :src="authStore.user.avatar" />
+      <el-avatar class="mr-8px min-w-36px" :size="36" :src="fileUrl(authStore.user.avatar)" />
       <div class="max-w-88px line-clamp-2">{{ authStore.user.nickname }}</div>
     </div>
     <template #dropdown>
@@ -21,10 +21,10 @@
 
 <script setup lang="ts">
 import { useAuthStore } from '@/stores'
-import { removeToken, navigateByPath } from '@/utils'
+import { removeToken, navigateByPath, fileUrl } from '@/utils'
 import { CFG } from '@/config'
-const authStore = useAuthStore()
 
+const authStore = useAuthStore()
 const logout = async () => {
   const sure = await window.$confirm.warning({ message: '确认是否退出账号' })
   if (sure) {

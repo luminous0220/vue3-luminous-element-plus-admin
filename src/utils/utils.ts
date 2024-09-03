@@ -11,6 +11,15 @@ export const getImg = (url: string, path = '/images') => {
 }
 
 /**
+ * @description: 访问后端服务上的文件
+ * @param  url 图片名称
+ * @param  path 路径地址
+ */
+export const fileUrl = (name: string, path = '/images') => {
+  return import.meta.env.VITE_FILE_PREFIX + path + '/' + name
+}
+
+/**
  * @description 扁平化数组
  */
 export const flatMenuRoutes = (routes: IMenu.Item[]) => {
