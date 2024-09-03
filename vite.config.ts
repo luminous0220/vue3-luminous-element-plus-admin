@@ -18,8 +18,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       port: viteEnv.VITE_PORT,
       proxy: {
         '/api': {
-          target: 'http://47.109.19.100',
-          // target: 'http://localhost:8182',
+          target: 'http://localhost:8182',
           changeOrigin: true, // 允许跨域,
           rewrite: (path) => path.replace('/api', '')
         }
