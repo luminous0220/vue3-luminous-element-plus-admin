@@ -17,7 +17,7 @@ const props = withDefaults(
     pageNumber: number
     pageSize: number
     pageCount?: number
-    size?: string
+    size?: "" | "small" | "default" | "large"
   }>(),
   {
     size: 'large',
