@@ -14,8 +14,8 @@
         <template #default>
           <slot :searchParam="searchParam" name="formButton">
             <div>
-              <el-button v-debounce type="primary" @click="reset">重置</el-button>
-              <el-button v-debounce type="warning" @click="search">查询</el-button>
+              <el-button type="primary" v-throttle="reset">重置</el-button>
+              <el-button type="warning" v-throttle="search">查询</el-button>
             </div>
           </slot>
         </template>
@@ -30,7 +30,7 @@
         <!-- 左侧按钮 -->
         <div class="flex">
           <!-- 导出按钮 -->
-          <el-button v-if="props.exportApi" v-debounce type="warning" @click="exportFile">
+          <el-button v-if="props.exportApi" type="warning" v-throttle="exportFile">
             导出表格数据
             <template #icon>
               <i-carbon-cloud-download />
@@ -46,7 +46,7 @@
         <div v-if="toolButton">
           <slot name="rightHeaderButton">
             <div class="whitespace-nowrap!">
-              <el-button v-debounce circle v-if="showToolButton('refresh')" @click="loadData">
+              <el-button circle v-if="showToolButton('refresh')" v-throttle="loadData">
                 <template #icon>
                   <i-ep-refresh />
                 </template>

@@ -1,7 +1,7 @@
 <template>
   <span>
     <slot>
-      <el-button class="ml-14px mr-14px" v-debounce plain @click="open">
+      <el-button class="ml-14px mr-14px" plain v-throttle="open">
         {{ text }}
         <i-ep-upload-filled class="ml-5px text-[#369eff]!" />
       </el-button>
@@ -33,7 +33,7 @@
       </el-upload>
       <template #footer>
         <el-button @click="BasicDialogRef?.close">关闭</el-button>
-        <el-button v-debounce type="primary" @click="submitUpload">上传</el-button>
+        <el-button type="primary" v-throttle="submitUpload">上传</el-button>
       </template>
     </basic-dialog>
   </span>

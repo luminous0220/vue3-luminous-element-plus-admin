@@ -53,7 +53,7 @@
           type="primary"
           class="w-46%! h-48px! text-18px!"
           :loading="loading"
-          @click="onLogin"
+          v-throttle="onLogin"
           >登录</el-button
         >
       </div>

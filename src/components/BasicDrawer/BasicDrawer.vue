@@ -9,7 +9,7 @@
     <template #footer v-if="!$attrs.hideFooter">
       <slot name="footer">
         <el-button @click="close">取消</el-button>
-        <el-button type="primary" v-debounce @click="$emit('onConfirm')">确定</el-button>
+        <el-button type="primary" v-throttle ="$emit('onConfirm')">确定</el-button>
       </slot>
     </template>
   </el-drawer>

@@ -78,7 +78,7 @@
           <div class="flex mt-18px mb-18px justify-between">
             <el-button class="w-46%! h-48px! text-18px!" @click="onBack">返回</el-button>
             <el-button
-              v-debounce
+              v-throttle
               class="w-46%! h-48px! text-18px!"
               type="primary"
               @click="onSubmit(formEl)"
@@ -97,7 +97,7 @@
         title="注册成功"
         sub-title="已发送邮件到您的邮箱，请前往激活">
         <template #extra>
-          <el-button v-debounce type="primary" @click="onBack">返回登录</el-button>
+          <el-button type="primary" @click="onBack">返回登录</el-button>
         </template>
       </el-result>
     </section>

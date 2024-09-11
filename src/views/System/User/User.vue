@@ -28,7 +28,7 @@
         </el-button>
 
         <!-- 导出按钮 -->
-        <el-button v-debounce type="warning" @click="exportFile">
+        <el-button type="warning" v-throttle="exportFile">
           导出上传模版
           <template #icon>
             <i-carbon-document-export />

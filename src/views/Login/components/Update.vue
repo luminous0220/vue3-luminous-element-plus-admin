@@ -43,7 +43,7 @@
                 </template>
               </el-input>
 
-              <el-button class="w-120px!" :disabled="!isEnd" v-debounce="2000" @click="sendCode">
+              <el-button class="w-120px!" :disabled="!isEnd" v-throttle="sendCode">
                 {{ isEnd ? '获取验证码' : timeLeft + ' s' }}
               </el-button>
             </div>
@@ -93,7 +93,7 @@
             <el-button class="w-46%! h-48px! text-18px!" @click="$emit('onBack', 'login')"
               >返回</el-button
             >
-            <el-button v-debounce type="primary" class="w-46%! h-48px! text-18px!" @click="onSubmit"
+            <el-button type="primary" class="w-46%! h-48px! text-18px!" v-throttle="onSubmit"
               >修改密码</el-button
             >
           </div>

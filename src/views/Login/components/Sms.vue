@@ -40,7 +40,7 @@
               v-if="isEnd"
               type="primary"
               :underline="false"
-              @click="getSmsCode">
+              v-throttle="getSmsCode">
               获取验证码
             </el-link>
           </template>
@@ -51,11 +51,10 @@
     <Motion :delay="0.3" name="wipe-fade-bottom-top">
       <div class="w-full">
         <el-button
-          v-debounce
           type="primary"
           class="w-full h-48px! text-18px!"
           :loading="loading"
-          @click="onLogin"
+          v-throttle="onLogin"
           >登录/注册</el-button
         >
       </div>

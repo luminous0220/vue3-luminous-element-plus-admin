@@ -31,7 +31,7 @@
       <template #footer>
         <span class="dialog-footer">
           <el-button @click="visiable = false">关闭</el-button>
-          <el-button type="primary" v-debounce @click="confirmCrop">修改</el-button>
+          <el-button type="primary" v-throttle="confirmCrop">修改</el-button>
         </span>
       </template>
     </basic-dialog>

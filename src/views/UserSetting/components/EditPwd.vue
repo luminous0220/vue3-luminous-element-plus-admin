@@ -14,12 +14,7 @@
           :schema="oldPwdSchema"
           :model="oldPwdModel"
           ref="oldPwdFormRef">
-          <el-button
-            type="warning"
-            plain
-            class="w-full! h-48px! text-18px!"
-            v-debounce
-            @click="editByPwd"
+          <el-button type="warning" plain class="w-full! h-48px! text-18px!" v-throttle="editByPwd"
             >修改密码</el-button
           >
         </basic-form>
@@ -35,8 +30,7 @@
             type="warning"
             plain
             class="w-full! h-48px! text-18px!"
-            v-debounce
-            @click="editByEmail"
+            v-throttle="editByEmail"
             >修改密码</el-button
           >
         </basic-form>
@@ -186,7 +180,7 @@ const emailSchema = reactive<IFormSchema[]>([
               prefix: () => <i-carbon-security />
             }}></el-input>
 
-          <el-button size="large" disabled={!isEnd} v-debounce={2000} onClick={sendCode}>
+          <el-button size="large" disabled={!isEnd} v-throttle={sendCode}>
             {isEnd ? '获取验证码' : timeLeft + ' s'}
           </el-button>
         </div>

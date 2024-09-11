@@ -21,13 +21,13 @@
         v-if="flush"
         ref="formRef"
         :model="editProps.row"
-        :schema="editProps.formSchema"
+        :schema="editProps.formSchema!"
         v-bind="editProps.formAttrs" />
     </slot>
     <template #footer>
       <slot name="footer">
         <el-button @click="close">取消</el-button>
-        <el-button type="primary" v-debounce @click="onSubmit">确定</el-button>
+        <el-button type="primary"  v-throttle="onSubmit">确定</el-button>
       </slot>
     </template>
   </el-drawer>
@@ -53,13 +53,13 @@
         v-if="flush"
         ref="formRef"
         :model="editProps.row"
-        :schema="editProps.formSchema"
+        :schema="editProps.formSchema!"
         v-bind="editProps.formAttrs" />
     </slot>
     <template #footer>
       <slot name="footer">
         <el-button @click="close">取消</el-button>
-        <el-button type="primary" v-debounce @click="onSubmit">确定</el-button>
+        <el-button type="primary" v-throttle="onSubmit">确定</el-button>
       </slot>
     </template>
   </el-dialog>

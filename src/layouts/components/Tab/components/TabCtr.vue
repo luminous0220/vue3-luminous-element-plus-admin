@@ -1,6 +1,6 @@
 <template>
   <el-dropdown trigger="click">
-    <el-button v-debounce size="small" type="primary">
+    <el-button size="small" type="primary">
       <span>更多</span>
       <el-icon class="ml-6px">
         <i-ep-arrow-down />

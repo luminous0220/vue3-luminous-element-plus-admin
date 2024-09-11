@@ -1,28 +1,31 @@
 /**
- * v-throttle
- * 按钮防抖指令，可自行扩展至input
- * 接收参数：function类型
- */
+* @description 防止按钮在短时间内被多次点击，使用节流函数限制规定时间内只能点击一次。
+*/
 import type { Directive, DirectiveBinding } from 'vue';
 interface ElType extends HTMLElement {
   _click: () => any;
+  disabled: boolean;
 }
-export const debounceDirective: Directive = {
+export const throttleDirective: Directive = {
   mounted(el: ElType, binding: DirectiveBinding) {
     if (typeof binding.value !== 'function') {
-      throw 'v-throttle指令必须指向一个函数';
+      throw 'v-debounce指令必须指向一个函数';
     }
-    let timer: NodeJS.Timeout | null = null;
 
     const time = binding.arg ? Number(binding.arg) : 500
 
+    let timer: NodeJS.Timeout | null = null;
     el._click = function () {
       if (timer) {
-        clearInterval(timer);
+        clearTimeout(timer);
       }
-      timer = setTimeout(() => {
+      if (!el.disabled) {
+        el.disabled = true;
         binding.value();
-      }, time);
+        timer = setTimeout(() => {
+          el.disabled = false;
+        }, time);
+      }
     };
     el.addEventListener('click', el._click);
   },

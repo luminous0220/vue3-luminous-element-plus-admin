@@ -1,9 +1,7 @@
 <template>
   <basic-form label-width="60px" class="mt-38px" ref="formRef" :model="model" :schema="schema" />
   <div class="flex justify-end">
-    <el-button class="mr-10px" type="primary" v-debounce="2000" @click="onSubmit"
-      >确认修改</el-button
-    >
+    <el-button class="mr-10px" type="primary" v-throttle="onSubmit">确认修改</el-button>
   </div>
 </template>
 
